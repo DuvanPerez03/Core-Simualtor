@@ -1,0 +1,533 @@
+/* ================================================================
+   OS Simulator - Dark Cyberpunk Theme
+   ================================================================ */
+
+/* ---- Root Variables ---- */
+.root {
+    -fx-background-color: #0d0f14;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -color-bg-dark: #0d0f14;
+    -color-bg-panel: #141820;
+    -color-bg-card: #1a2030;
+    -color-bg-card2: #1e2538;
+    -color-accent: #00d4ff;
+    -color-accent2: #7c3aed;
+    -color-success: #10b981;
+    -color-warning: #f59e0b;
+    -color-danger: #ef4444;
+    -color-text: #e2e8f0;
+    -color-text-muted: #64748b;
+    -color-border: #2d3748;
+}
+
+/* ---- Main Layout ---- */
+.main-root {
+    -fx-background-color: #0d0f14;
+}
+
+.sidebar {
+    -fx-background-color: #0a0c10;
+    -fx-border-color: #1e2d3d;
+    -fx-border-width: 0 1 0 0;
+    -fx-min-width: 220px;
+    -fx-max-width: 220px;
+}
+
+.sidebar-title {
+    -fx-text-fill: #00d4ff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 20 16 4 16;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: #4a5568;
+    -fx-font-size: 10px;
+    -fx-padding: 0 16 20 16;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 13px;
+    -fx-padding: 12 16 12 20;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+    -fx-min-width: 220px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.nav-button:hover {
+    -fx-background-color: #1a2030;
+    -fx-text-fill: #e2e8f0;
+}
+
+.nav-button-active {
+    -fx-background-color: linear-gradient(to right, #00d4ff22, transparent);
+    -fx-text-fill: #00d4ff;
+    -fx-border-color: #00d4ff transparent transparent transparent;
+    -fx-border-width: 0 0 0 3;
+    -fx-font-weight: bold;
+}
+
+/* ---- Content Area ---- */
+.content-area {
+    -fx-background-color: #0d0f14;
+    -fx-padding: 24;
+}
+
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e2e8f0;
+}
+
+.page-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #64748b;
+    -fx-padding: 2 0 0 0;
+}
+
+.section-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00d4ff;
+    -fx-padding: 0 0 8 0;
+}
+
+/* ---- Cards ---- */
+.card {
+    -fx-background-color: #141820;
+    -fx-background-radius: 12;
+    -fx-border-color: #1e2d3d;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(gaussian, #000000aa, 12, 0, 0, 4);
+}
+
+.card-accent {
+    -fx-background-color: #141820;
+    -fx-background-radius: 12;
+    -fx-border-color: #00d4ff44;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 16;
+}
+
+/* ---- Metric Cards ---- */
+.metric-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00d4ff;
+}
+
+.metric-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #64748b;
+    -fx-padding: 0;
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+    -fx-background-color: linear-gradient(to right, #00d4ff, #0099cc);
+    -fx-text-fill: #0a0c10;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #00d4ff66, 10, 0, 0, 2);
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to right, #33ddff, #00b8e6);
+    -fx-effect: dropshadow(gaussian, #00d4ff99, 15, 0, 0, 4);
+}
+
+.btn-secondary {
+    -fx-background-color: #1a2030;
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 13px;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 8;
+    -fx-border-color: #2d3748;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #1e2538;
+    -fx-text-fill: #e2e8f0;
+    -fx-border-color: #4a5568;
+}
+
+.btn-danger {
+    -fx-background-color: #7f1d1d;
+    -fx-text-fill: #fca5a5;
+    -fx-font-size: 13px;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #991b1b;
+}
+
+.btn-success {
+    -fx-background-color: #065f46;
+    -fx-text-fill: #6ee7b7;
+    -fx-font-size: 13px;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-success:hover {
+    -fx-background-color: #047857;
+}
+
+/* ---- Form Controls ---- */
+.input-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #94a3b8;
+    -fx-padding: 0 0 4 0;
+}
+
+.text-input {
+    -fx-background-color: #0d0f14;
+    -fx-text-fill: #e2e8f0;
+    -fx-prompt-text-fill: #4a5568;
+    -fx-border-color: #2d3748;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 8 12 8 12;
+    -fx-font-size: 13px;
+    -fx-border-width: 1;
+}
+
+.text-input:focused {
+    -fx-border-color: #00d4ff;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, #00d4ff44, 8, 0, 0, 0);
+}
+
+.combo-box {
+    -fx-background-color: #0d0f14;
+    -fx-border-color: #2d3748;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 4;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #e2e8f0;
+    -fx-background-color: #0d0f14;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #141820;
+    -fx-border-color: #2d3748;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #141820;
+    -fx-text-fill: #e2e8f0;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #1e2538;
+}
+
+.spinner {
+    -fx-background-color: #0d0f14;
+    -fx-border-color: #2d3748;
+    -fx-border-radius: 6;
+}
+
+.spinner .text-field {
+    -fx-background-color: #0d0f14;
+    -fx-text-fill: #e2e8f0;
+}
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button {
+    -fx-background-color: #1a2030;
+}
+
+.check-box {
+    -fx-text-fill: #94a3b8;
+}
+
+.check-box .box {
+    -fx-background-color: #0d0f14;
+    -fx-border-color: #2d3748;
+    -fx-border-radius: 3;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #00d4ff;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #00d4ff22;
+    -fx-border-color: #00d4ff;
+}
+
+/* ---- Tables ---- */
+.table-view {
+    -fx-background-color: #141820;
+    -fx-border-color: #1e2d3d;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-table-cell-border-color: #1e2d3d;
+}
+
+.table-view .column-header {
+    -fx-background-color: #0a0c10;
+    -fx-border-color: #1e2d3d;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #00d4ff;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 4 8 8;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: #141820;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #1a2030;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #1e2538;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #00d4ff22;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #cbd5e1;
+    -fx-font-size: 12px;
+    -fx-padding: 6 8 6 8;
+}
+
+.table-view .table-cell:selected {
+    -fx-text-fill: #e2e8f0;
+}
+
+/* ---- Scroll Pane ---- */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar {
+    -fx-background-color: #0d0f14;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #2d3748;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .increment-button, .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+/* ---- Tab Pane ---- */
+.tab-pane {
+    -fx-background-color: transparent;
+    -fx-tab-min-height: 36px;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: #0a0c10;
+    -fx-border-color: transparent transparent #1e2d3d transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.tab {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 8 16;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 13px;
+}
+
+.tab:selected {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #00d4ff transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #00d4ff;
+    -fx-font-weight: bold;
+}
+
+.tab:hover .tab-label {
+    -fx-text-fill: #94a3b8;
+}
+
+.tab-pane .tab-content-area {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+/* ---- Progress Bar ---- */
+.progress-bar {
+    -fx-background-color: #1a2030;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-min-height: 8px;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #00d4ff, #7c3aed);
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+/* ---- Status Labels ---- */
+.status-running {
+    -fx-text-fill: #10b981;
+    -fx-font-weight: bold;
+}
+
+.status-ready {
+    -fx-text-fill: #00d4ff;
+}
+
+.status-waiting {
+    -fx-text-fill: #f59e0b;
+}
+
+.status-terminated {
+    -fx-text-fill: #64748b;
+}
+
+.status-new {
+    -fx-text-fill: #7c3aed;
+}
+
+/* ---- Badge / Tag ---- */
+.badge {
+    -fx-background-radius: 4;
+    -fx-padding: 2 8 2 8;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.badge-blue {
+    -fx-background-color: #0c2a3d;
+    -fx-text-fill: #00d4ff;
+}
+
+.badge-green {
+    -fx-background-color: #064e3b;
+    -fx-text-fill: #10b981;
+}
+
+.badge-yellow {
+    -fx-background-color: #451a03;
+    -fx-text-fill: #f59e0b;
+}
+
+.badge-red {
+    -fx-background-color: #450a0a;
+    -fx-text-fill: #ef4444;
+}
+
+.badge-purple {
+    -fx-background-color: #2e1065;
+    -fx-text-fill: #a78bfa;
+}
+
+/* ---- Divider ---- */
+.separator {
+    -fx-background-color: #1e2d3d;
+}
+
+.separator .line {
+    -fx-border-color: #1e2d3d;
+    -fx-border-width: 0.5;
+}
+
+/* ---- Tooltip ---- */
+.tooltip {
+    -fx-background-color: #1a2030;
+    -fx-text-fill: #e2e8f0;
+    -fx-border-color: #00d4ff44;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 12px;
+    -fx-padding: 6 10;
+}
+
+/* ---- Gantt specific ---- */
+.gantt-container {
+    -fx-background-color: #0a0c10;
+    -fx-border-color: #1e2d3d;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-width: 1;
+}
+
+/* ---- Memory frame ---- */
+.memory-frame-free {
+    -fx-background-color: #141820;
+    -fx-border-color: #2d3748;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-border-width: 1;
+}
+
+.memory-frame-used {
+    -fx-background-color: #0c2a3d;
+    -fx-border-color: #00d4ff66;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-border-width: 1;
+}
+
+/* ---- Alert/Info boxes ---- */
+.info-box {
+    -fx-background-color: #0c2a3d;
+    -fx-border-color: #00d4ff33;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 12 16;
+}
+
+.warning-box {
+    -fx-background-color: #451a03;
+    -fx-border-color: #f59e0b33;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 12 16;
+}
+
+.info-box-text {
+    -fx-text-fill: #93c5fd;
+    -fx-font-size: 12px;
+}
